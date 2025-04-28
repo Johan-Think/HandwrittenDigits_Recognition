@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
-   import seaborn as sns
-   import numpy as np
+import seaborn as sns
+import numpy as np
 
-   def visualize_samples(X_data, y_data, save_path='outputs/figures/samples.png'):
+def visualize_samples(X_data, y_data, save_path='outputs/figures/samples.png'):
        plt.figure(figsize=(10, 10))
        for i in range(25):
            plt.subplot(5, 5, i+1)
@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
        plt.savefig(save_path)
        plt.close()
 
-   def visualize_class_distribution(y_train, y_test, save_path='outputs/figures/class_distribution.png'):
+def visualize_class_distribution(y_train, y_test, save_path='outputs/figures/class_distribution.png'):
        plt.figure(figsize=(12, 5))
        plt.subplot(1, 2, 1)
        sns.countplot(x=y_train)
@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
        plt.savefig(save_path)
        plt.close()
 
-   def visualize_predictions(X_test, y_true, y_pred_classes, save_path='outputs/figures/predictions.png'):
+def visualize_predictions(X_test, y_true, y_pred_classes, save_path='outputs/figures/predictions.png'):
        plt.figure(figsize=(12, 12))
        for i in range(16):
            plt.subplot(4, 4, i+1)
