@@ -2,7 +2,7 @@ def build_cnn_model():
        # Placeholder
        pass
 
-   def train_cnn(model, X_train, y_train, X_val, y_val, datagen):
+def train_cnn(model, X_train, y_train, X_val, y_val, datagen):
        # Placeholder
        pass
 # model = keras . Sequential ()
