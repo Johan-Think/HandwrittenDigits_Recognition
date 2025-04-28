@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
-   import seaborn as sns
-   from sklearn.metrics import confusion_matrix
+import seaborn as sns
+from sklearn.metrics import confusion_matrix
 
-   def plot_accuracy(history, save_path='outputs/figures/accuracy.png'):
+def plot_accuracy(history, save_path='outputs/figures/accuracy.png'):
        plt.figure(figsize=(12, 5))
        plt.subplot(1, 2, 1)
        plt.plot(history.history['accuracy'], label='Train Accuracy')
@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
        plt.savefig(save_path)
        plt.close()
 
-   def plot_confusion_matrix(y_true, y_pred_classes, save_path='outputs/figures/confusion_matrix.png'):
+def plot_confusion_matrix(y_true, y_pred_classes, save_path='outputs/figures/confusion_matrix.png'):
        cm = confusion_matrix(y_true, y_pred_classes)
        plt.figure(figsize=(10, 8))
        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
